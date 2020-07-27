@@ -24,3 +24,4 @@ pyproject.toml
 README.md
 Dockerfile
 docker-compose.yaml
+venv

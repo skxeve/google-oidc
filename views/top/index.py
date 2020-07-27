@@ -1,4 +1,4 @@
-from flask import Blueprint, current_app
+from flask import Blueprint, current_app, render_template
 
 top = Blueprint("top", __name__)
 
@@ -6,4 +6,4 @@ top = Blueprint("top", __name__)
 @top.route("/hello")
 def echo():
     current_app.logger.debug("top hello")
-    return "Hello World!"
+    return render_template("hello.html", title="Hello Today!")
