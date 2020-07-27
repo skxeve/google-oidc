@@ -1,0 +1,13 @@
+version: '3'
+services:
+    goidc:
+        restart: always
+        build: .
+        container_name: 'google-oidc-docker'
+        tty: true
+        volumes:
+            - .:/usr/local/share/docker-application/
+        environment:
+            - "TZ=Asia/Tokyo"
+        ports:
+            - "8080:8080"
